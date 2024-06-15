@@ -1,0 +1,29 @@
+---
+const { svgClass = "", color = "", isReversed = false } = Astro.props;
+---
+
+{
+  !isReversed ? (
+    <svg class={svgClass} viewBox="0 0 500 150" preserveAspectRatio="none">
+      <path
+        d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+        class={color}
+      />
+    </svg>
+  ) : (
+    <svg
+      class={svgClass}
+      viewBox="0 0 1440 320"
+      preserveAspectRatio="none"
+    >
+      <path
+        class="fill-sky-300"
+        d="M0,32 L80,58.7 C160,85 320,139 480,144 S800,107 960,111.7 C1120,116.3 1280,158.3 1360,180 L1440,201.3 V0 H0 Z"
+      />
+      <path
+        class={color}
+        d="M0,192 L80,181.3 C160,171 320,149 480,122.7 C640,96 800,64 960,69.3 C1120,74.7 1280,116.7 1360,138.4 L1440,160 V0 H0 Z"
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,122 @@
+---
+import { work } from "@cv";
+---
+
+<section id="experience" class="flex flex-col items-center min-h-auto w-full">
+  <header class="flex justify-center items-center">
+    <h2 class="text-3xl font-bold text-gunmetal">Experiencia</h2>
+  </header>
+  <main class="max-w-5xl mx-auto px-4 py-8 md:px-8 flex flex-center">
+    <ul
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 px-4 md:px-0"
+    >
+      {
+        work.map(
+          ({
+            url,
+            position,
+            startDate,
+            endDate,
+            summary,
+            highlights,
+            name,
+          }) => {
+
+            const startMonth = new Date(startDate).toLocaleString("default", {
+              month: "short",
+            });
+            const endMonth =
+              endDate != null
+                ? new Date(endDate).toLocaleString("default", {
+                    month: "short",
+                  })
+                : "";
+            const startYear = new Date(startDate).getFullYear();
+            const endYear =
+              endDate != null ? new Date(endDate).getFullYear() : "Actual";
+
+            return (
+              <li >
+                <article class="flex flex-col gap-5 border border-gray-200 rounded-lg p-4 h-full">
+                  <header class="flex-1">
+                    <h3 class="text-xl font-semibold mb-1 flex justify-between pb-5">
+                      <a
+                        href={url}
+                        target="_blank"
+                        title={`Ver el proyecto ${name}`}
+                        class="text-gray-900 hover:underline"
+                      >
+                        {name}
+                      </a>
+                      <span class="flex justify-end gap-1 text-sm text-[#058C42] [&>time]:animate-flicker">
+                        <time 
+                            datetime={startDate} 
+                            data-title={startDate}
+                        >
+                            {startMonth}-{startYear}
+                        </time>
+                        <time 
+                            datetime={endDate} 
+                            data-title={endDate}
+                        >
+                            {endMonth}-{endYear}
+                        </time>
+                      </span>
+                    </h3>
+                    <p class="text-xs leading-tight mb-1">{summary}</p>
+                  </header>
+                  <footer class="flex-wrap ">
+                    <div class="flex flex-wrap gap-1 text-xs max-h-20 overflow-y-auto min-w-full scrollbar-thin text-pretty">
+                        {highlights.map((highlight) => {
+                            return (
+                            <span class="bg-gray-200 text-gray-700 rounded-full px-2 py-1 font-medium">
+                                {highlight}
+                            </span>
+                            );
+                        })}
+                    </div>
+                </footer>
+                </article>
+              </li>
+            );
+          }
+        )
+      }
+    </ul>
+  </main>
+</section>
+
+<style>
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+    to{
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+
+  section{
+    view-timeline-name: --image; 
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+  }
+</style>

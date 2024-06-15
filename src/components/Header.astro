@@ -1,0 +1,79 @@
+---
+import Code from "@/icons/Code.astro";
+---
+<header 
+    id="landing-header" 
+    class="
+    flex items-center justify-between 
+    py-1 px-2
+    min-h-[5vh]
+    text-sm
+    [&>nav>ul>li>a]:px-2.5 [&>nav>ul>li>a]:py-4
+    [&>nav>ul>li>a]:transition-colors [&>nav>ul>li>a]:duration-500 [&>nav>ul>li>a]:font-medium "
+>
+    <nav class="flex flex-grow basis-0">
+        <ul>
+            <li>
+                <a href="#" id="landing-logo" class="flex  font-semibold text-sky-400">
+                    <span><Code class="size-5" /></span><h1 class="ml-2">Chepogor</h1>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <nav>
+        <ul class="flex [&>li>a]:inline-block">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#technologies">Experiencia</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#about">Sobre mi</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+    <nav class="flex flex-grow basis-0 justify-end mr-4">
+        <ul class="flex gap-2">
+            <li>🌒</li>
+            <li>🌕</li>
+        </ul>
+    </nav>
+
+    <div
+        id="menu-backdrop"
+        class={`
+            absolute bg-black/5 backdrop-blur-lg rounded
+            translate-x-[var(--left)] translate-y-[var(--top)]
+            left-0 top-0
+            w-[var(--width)] h-[var(--height)]
+            transition-all duration-300
+            ease-in-out opacity-0 -z-10
+          `}
+    >
+
+    </div>
+</header>
+
+<script>
+    const listItem = document.querySelectorAll("#landing-header li");
+    const menuBackdrop = document.querySelector("#menu-backdrop") as HTMLElement;
+
+    listItem.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+            const { left, top, width, height } = item.getBoundingClientRect();
+
+            menuBackdrop.style.setProperty("--left", `${left}px`)
+            menuBackdrop.style.setProperty("--top", `${top}px`)
+            menuBackdrop.style.setProperty("--width", `${width}px`)
+            menuBackdrop.style.setProperty("--height", `${height}px`)
+
+            menuBackdrop.style.opacity = "1";
+            menuBackdrop.style.visibility = "visible";  
+        })
+    })
+
+    listItem.forEach((item) => {
+        item.addEventListener("mouseleave", () => {
+            menuBackdrop.style.opacity = "0";
+            menuBackdrop.style.visibility = "hidden";        
+        })
+    })
+</script>
