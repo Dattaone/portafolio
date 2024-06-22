@@ -7,7 +7,6 @@ export default {
 	theme: {
 		extend: {
 			colors:{
-				tsBlue: '#007acc',
 				gunmetal: '#2D3142'
 			},
 			keyframes: {

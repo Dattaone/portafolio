@@ -215,7 +215,11 @@
           "Dashboard de registros de ventas",
           "Implementado con C#, ASP.NET, jQuery y MySQL"
         ],
-        "url": "https://github.com/Dattaone/Carrito-de-Compras-.NET"
+        "skills":[
+          "C#","MySQL","JS","ASP.NET"
+        ],
+        "url": "https://github.com/Dattaone/Carrito-de-Compras-.NET",
+        "image": "projects/Recibo.webp"
       },
       {
         "name": "Generador de Recibos",
@@ -226,7 +230,11 @@
           "Integración con base de datos",
           "Implementado con Java y MySQL"
         ],
-        "url": "https://github.com/Dattaone/Generador-de-Recibos"
+        "skills":[
+          "Java","MySQL"
+        ],
+        "url": "https://github.com/Dattaone/Generador-de-Recibos",
+        "image": "projects/SpaceX.jpg"
       },
       {
         "name": "Lanzamientos SpaceX",
@@ -237,7 +245,11 @@
           "Estilización y paginación",
           "Implementado con Astro y Tailwind"
         ],
-        "url": "https://github.com/Dattaone/Space-x-documentation"
+        "skills":[
+          "JS","Astro","Tailwind"
+        ],
+        "url": "https://github.com/Dattaone/Space-x-documentation",
+        "image": "projects/SpaceX.jpg"
       }
       
     ]

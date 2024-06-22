@@ -1,0 +1,102 @@
+---
+import {projects} from "@cv";
+
+import SkillPill from "@/components/SkillPill.astro";
+import AstroIcon from "@/icons/skills/AstroIcon.astro";
+
+
+interface Projects {
+  name: string;
+  isActive: boolean;
+  description: string;
+  highlights: string[];
+  skills: string[] | undefined;
+  url: string;
+  image: string;
+}
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingk Graphic Design</title>
+</head>
+<body class="bg-white w-full">
+    <header class="flex justify-between items-center py-4 px-6">
+        <div class="text-4xl font-bold">lingk</div>
+        <nav class="flex space-x-4">
+            <a href="#" class="text-yellow-600">small business branding</a>
+            <a href="#" class="text-gray-600">wedding & event stationery</a>
+            <a href="#" class="text-gray-600">about</a>
+            <a href="#" class="text-gray-600">contact</a>
+        </nav>
+    </header>
+    <main class="w-full">
+        <h1 class="text-center text-3xl font-semibold mb-4">Lorem, ipsum dolor.</h1>
+        {
+            projects.map(({ name, isActive, description, highlights, skills, url, image },index) => 
+            {
+            const isEven = (index+1)%2==0;    
+            return (
+            <section class="w-full h-[70vh] mt-20">
+                <div class="flex justify-center items-center w-full h-full">
+                    <div class="flex h-full w-[75vw]">
+                        <div class:list={[
+                            "flex-[3] flex items-center",
+                            {
+                            "order-1": !isEven,
+                            "order-2": isEven,
+                            }
+                        ]}>
+                            <div class:list={[
+                              "py-10",
+                              {
+                                "pr-20": !isEven,
+                                "pl-20": isEven
+                              }  
+                            ]}>
+                                <img src={image} alt="Spoilt at Subi" class="w-full h-full object-cover   rounded-2xl">
+                            </div>
+                        </div>
+                        <div class:list={[
+                        "flex-[2] h-full",
+                        {
+                            "order-2": !isEven,
+                            "order-1": isEven,
+                        }
+                        ]}>
+                            <article class="flex flex-col gap-5 rounded-lg py-4 h-full [&>p]:text-md [&>p]:leading-tight justify-center">
+                                <a 
+                                href="_blank"
+                                title={`Ver el proyecto ${name}`}
+                                >
+                                <h1 class="text-3xl font-bold text-[#ff3385]">{name}</h1>
+                                </a>
+                                <p class="">{description}</p>
+                                <ul>
+                                {highlights.map((highlight)=>(
+                                    <li class="flex"><span>- </span>
+                                        <p class="">{highlight}</p>
+                                    </li>
+                                ))}
+                                </ul>
+                                <ul class="flex gap-1">
+                                {skills?.map((skill)=>(
+                                    <li>
+                                    <SkillPill>{skill}</SkillPill>
+                                    </li>
+                                ))}
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            );})
+        }
+        
+    </main>
+</body>
+</html>

@@ -1,84 +1,97 @@
 ---
-import { work } from "@cv";
+import { projects } from "@cv";
+import SkillPill from "../SkillPill.astro";
+import AstroIcon from "@/icons/skills/AstroIcon.astro";
+import GitHub from "@/icons/contact/GitHub.astro";
+
+interface Projects {
+  name: string;
+  isActive: boolean;
+  description: string;
+  highlights: string[];
+  url: string;
+  image: string;
+}
 ---
 
-<section id="experience" class="flex flex-col items-center min-h-screen ">
+<section id="experience" class="flex flex-col gap-7 py-20">
   <header class="flex justify-center items-center">
     <h2 class="text-3xl font-bold text-gunmetal">Proyectos</h2>
   </header>
-  <main class="max-w-5xl mx-auto px-4 py-8 md:px-8 flex flex-center">
-    <ul
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 px-4 md:px-0"
-    >
+  <main class="">
+    <ul class="flex flex-col gap-10">
       {
-        work.map(
-          ({
-            url,
-            position,
-            startDate,
-            endDate,
-            summary,
-            highlights,
-            name,
-          }) => {
-
-            const startMonth = new Date(startDate).toLocaleString("default", {
-              month: "short",
-            });
-            const endMonth =
-              endDate != null
-                ? new Date(endDate).toLocaleString("default", {
-                    month: "short",
-                  })
-                : "";
-            const startYear = new Date(startDate).getFullYear();
-            const endYear =
-              endDate != null ? new Date(endDate).getFullYear() : "Actual";
-
-            return (
-              <li >
-                <article class="flex flex-col gap-5 border border-gray-200 rounded-lg p-4 h-full">
-                  <header class="flex-1">
-                    <h3 class="text-xl font-semibold mb-1 flex justify-between pb-5">
-                      <a
-                        href={url}
-                        target="_blank"
-                        title={`Ver el proyecto ${name}`}
-                        class="text-gray-900 hover:underline"
-                      >
+        projects.map(
+          (
+            { name, isActive, description, highlights, skills, url, image },
+            index
+          ) => {
+          const isEven = (index+1)%2==0;
+          return(
+            <li class="flex justify-center w-full items-center">
+              <div class="flex items-center h-full w-[75vw]">
+                <div
+                  class:list={[
+                    "flex-[3] flex justify-center items-center",
+                    {
+                      "order-1": !isEven,
+                      "order-2": isEven,
+                    }
+                  ]}
+                >
+                  <div class:list={[
+                    "py-10",
+                    {
+                      "pr-20": !isEven,
+                      "pl-20": isEven
+                    }
+                  ]}
+                  >
+                    <img
+                      src={image}
+                      alt="Spoilt at Subi"
+                      class="w-full h-full object-cover rounded-2xl"
+                    />
+                  </div>
+                </div>
+                <div class:list={[
+                  "flex-[2] h-full",
+                  {
+                    "order-2": !isEven,
+                    "order-1": isEven,
+                  }
+                ]}>
+                  <article class="flex flex-col justify-center gap-5 rounded-lg py-10 h-full [&>p]:text-md [&>p]:leading-tight">
+                    <a
+                      href={url}
+                      target="_blank"
+                      title={`Ver el proyecto ${name}`}
+                    >
+                      <h1 class="text-3xl font-semibold text-[#ff3385]">
                         {name}
-                      </a>
-                      <span class="flex justify-end gap-1 text-sm text-[#058C42] [&>time]:animate-flicker">
-                        <time 
-                            datetime={startDate} 
-                            data-title={startDate}
-                        >
-                            {startMonth}-{startYear}
-                        </time>
-                        <time 
-                            datetime={endDate} 
-                            data-title={endDate}
-                        >
-                            {endMonth}-{endYear}
-                        </time>
-                      </span>
-                    </h3>
-                    <p class="text-xs leading-tight mb-1">{summary}</p>
-                  </header>
-                  <footer class="flex-wrap ">
-                    <div class="flex flex-wrap gap-1 text-xs max-h-20 overflow-y-auto min-w-full scrollbar-thin text-pretty">
-                        {highlights.map((highlight) => {
-                            return (
-                            <span class="bg-gray-200 text-gray-700 rounded-full px-2 py-1 font-medium">
-                                {highlight}
-                            </span>
-                            );
-                        })}
-                    </div>
-                </footer>
-                </article>
-              </li>
-            );
+                      </h1>
+                    </a>
+                    <p>{description}</p>
+                    <ul>
+                      {highlights.map((highlight) => (
+                        <li class="flex">
+                          <span class="text-sky-400">✔</span>
+                          <p>{highlight}</p>
+                        </li>
+                      ))}
+                    </ul>
+                    <ul class="flex gap-1">
+                      {skills?.map((skill) => (
+                        <li>
+                          <SkillPill>{skill}</SkillPill>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                </div>
+              </div>
+            </li>
+          );
           }
         )
       }
@@ -102,13 +115,22 @@ import { work } from "@cv";
     from {
       transform: translateY(200px);
     }
-    to{
+    to {
       transform: translateY(0px);
     }
   }
 
-  section{
-    view-timeline-name: --image; 
+  h2 {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: reveal;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+  }
+  li {
+    view-timeline-name: --image;
     view-timeline-axis: block;
 
     animation-timeline: --image;
