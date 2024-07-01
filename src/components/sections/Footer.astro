@@ -1,0 +1,70 @@
+---
+import GitHub from "@/icons/contact/GitHub.astro";
+import LinkedIn from "@/icons/contact/LinkedIn.astro";
+import Mail from "@/icons/contact/Mail.astro";
+import Phone from "@/icons/contact/Phone.astro";
+import Toast from "../Toast.astro";
+---
+
+<section id="footer">
+    <div>
+        <svg viewBox="0 0 1920 79" class="fill-gray-300/50"><path d="M0 59l64-11c64-11 192-34 320-43s256-5 384 4 256 23 384 34 256 21 384 14 256-30 320-41l64-11v94H0z" class="_footer-wave_vzxu7_233"></path></svg>
+    </div>
+    <footer
+        class="flex justify-beetween items-center w-full h-24 bg-gray-300/50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 px-10 text-sm"
+    >
+        <div class="flex-grow basis-0 flex gap-4 [&>ul>li>a]:flex [&>ul>li>a]:items-center [&>ul>li>a]:gap-2 ">
+            <ul class="flex flex-col gap-3">
+                <li>
+                    <a href="https://github.com/Dattaone" target="_blank"><GitHub class="size-4 fill-gray-500"/> Dattaone </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com/in/tu_usuario" target="_blank"><LinkedIn class="size-4 fill-gray-500"/> Giuseppe Macchaivello </a>
+                </li>
+            </ul>
+            <ul class="flex flex-col gap-3">
+                <li>
+                    <a href="mailto:chepogor@gmail.com" target="_blank"><Mail class="size-4 "/> chepogor@gmail.com</a>
+                </li>
+                <li>
+                    <a href="#footer" id="phone-number"><Phone class="size-4 fill-gray-500"/> +51 918 959 496</a>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <p class="font-medium">
+                © 2024. Casi todos los derechos reservados.
+            </p>
+        </div>
+        <div class="flex-grow basis-0 flex justify-end">
+            <p>
+                <a href="https://github.com/Dattaone/portafolio" target="_blank" class="flex items-center gap-2"><GitHub class="size-4 fill-gray-500"/> Ver este proyecto en GitHub</a>
+            </p>
+        </div>
+    </footer>
+</section>
+<Toast />
+<script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+        const phoneNumber = document.getElementById('phone-number');
+        const toast = document.getElementById("toast");
+        phoneNumber.addEventListener('click', ()=>{
+            navigator.clipboard.writeText('+51 918 959 496').then(function() {
+
+                toast.setAttribute('data-type','clipboard');
+                document.dispatchEvent(new Event("DOMContentLoaded"));
+
+                toast.style.display = "flex";
+            
+                setTimeout(() => {
+                    toast.style.display = "none";
+                }, 5000);
+
+
+
+            }, function(err) {
+                console.error('Error al copiar el número de teléfono: ', err);
+            });
+        });
+    })
+</script>

@@ -1,0 +1,68 @@
+---
+import { basics } from "@cv";
+
+const {name, summary,label} = basics;
+---
+<section id="about" class="flex flex-col gap-10 mb-12 mt-10 pt-20">
+    <h2 class="text-3xl font-bold text-center text-gunmetal">Sobre mí</h2>
+    <div class="flex justify-center">
+        <div class="max-w-3xl">
+            
+          <div
+            class="relative m-4 block -mt-8 rounded-lg bg-white p-6 shadow- dark:bg-neutral-800 dark:shadow-black/20 md:mt-0 md:-ml-8">
+            <!-- About -->
+            <div class="md:flex md:flex-row">
+              <div
+                class="mx-auto mb-6 flex w-36 items-center justify-center md:mx-0 md:w-96 lg:mb-0">
+                <img
+                  src="foto2.webp"
+                  class="rounded-full shadow-md dark:shadow-black/30"
+                  alt="" />
+              </div>
+              <div class="md:ms-6">
+                <p
+                    class="mb-2 text-xl font-semibold text-gunmetal dark:text-neutral-200">
+                    {name}
+                </p>
+                <p
+                  class="mb-6 font-light text-gunmetal/90 dark:text-neutral-300">
+                  {summary}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<style>
+  @keyframes flicker {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.25;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes reveal {
+    from {
+      transform: translateY(200px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+  img,p,h2 {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: reveal;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+  }
+</style>

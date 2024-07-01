@@ -1,257 +1,258 @@
 {
-    "basics": {
-      "name": "Giuseppe Macchiavello",
-      "label": "Junior Full Stack Developer.",
-      "image": "/foto.webp",
-      "email": "chepogor@gmail.com",
-      "phone": "+51 918959496",
-      "url": "https://midu.dev",
-      "summary": "Estudiante de Desarrollo de Software con sólidos conocimientos en desarrollo de software y diseño web. Comprometido con el aprendizaje continuo y la mejora constante. Experimentado en la creación de aplicaciones web utilizando diversas tecnologías y frameworks. Capacidad para adaptarse rápidamente a nuevos entornos y tecnologías..",
-      "location": {
-        "address": "",
-        "postalCode": "08820",
-        "city": "Callao - Ventanilla",
-        "countryCode": "PE",
-        "region": "Perú"
+  "basics": {
+    "name": "Giuseppe Macchiavello",
+    "label": "Junior Full Stack Developer.",
+    "image": "/foto.webp",
+    "email": "chepogor@gmail.com",
+    "phone": "+51 918959496",
+    "url": "",
+    "summary": [
+      "Soy Giuseppe Macchiavello, aunque me conocen como Chepo. Desde pequeño, me adentré en la programación gracias a unos libros de mi padre sobre Java. Ahora estoy por completar mi carrera como Desarrollador de Software en Senati. He realizado prácticas en diversas empresas, destacando en el desarrollo de aplicaciones en Java y WordPress."
+    ],
+    "location": {
+      "address": "",
+      "postalCode": "08820",
+      "city": "Callao - Ventanilla",
+      "countryCode": "PE",
+      "region": "Perú"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "Giuseppe Macchiavello",
+        "url": "www.linkedin.com/in/giuseppe-macchiavello-arredondo-a152a52a6"
       },
-      "profiles": [
-        {
-          "network": "LinkedIn",
-          "username": "Giuseppe Macchiavello",
-          "url": "www.linkedin.com/in/giuseppe-macchiavello-arredondo-a152a52a6"
-        },
-        {
-          "network": "X",
-          "username": "midudev",
-          "url": "https://x.com/midudev"
-        },
-        {
-          "network": "GitHub",
-          "username": "Dattaone",
-          "url": "https://github.com/Dattaone"
-        }
+      {
+        "network": "X",
+        "username": "midudev",
+        "url": "https://x.com/midudev"
+      },
+      {
+        "network": "GitHub",
+        "username": "Dattaone",
+        "url": "https://github.com/Dattaone"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Nuestra Señora de Belén",
+      "position": "Desarrollador de Software",
+      "url": "https://github.com/Dattaone/Generador-de-Recibos",
+      "startDate": "2023-08-01",
+      "endDate": "2023-12-22",
+      "summary": "Durante mi tiempo de prácticas en Nuestra Señora de Belén, desarrollé varias aplicaciones en Java para solucionar problemas específicos de la escuela. También realicé tareas de mantenimiento y gestión de equipos en la zona de tecnología.",
+      "highlights": [
+        "Desarrollo de un sistema en Java para la gestión del almacén del AIP",
+        "Creación de un generador de recibos personalizados en Java",
+        "Creación de un registro de solicitudes de los docentes en Java"
       ]
     },
-    "work": [
-      {
-        "name": "Nuestra Señora de Belén",
-        "position": "Desarrollador de Software",
-        "url": "https://github.com/Dattaone/Generador-de-Recibos",
-        "startDate": "2023-08-01",
-        "endDate": "2023-12-22",
-        "summary": "Durante mi tiempo de prácticas en Nuestra Señora de Belén, desarrollé varias aplicaciones en Java para solucionar problemas específicos de la escuela. También realicé tareas de mantenimiento y gestión de equipos en la zona de tecnología.",
-        "highlights": [
-          "Desarrollo de un sistema en Java para la gestión del almacén del AIP",
-          "Creación de un generador de recibos personalizados en Java",
-          "Creación de un registro de solicitudes de los docentes en Java"
-        ]
-      },
-      {
-        "name": "Buho S.A.C",
-        "position": "Practicante de Despliegue Web",
-        "url": "https://twitch.tv/midudev",
-        "startDate": "2024-02-01",
-        "endDate": "2024-03-01",
-        "summary": "Durante mi periodo de prácticas en Buho S.A.C, adquirí experiencia en despliegue web, gestión de máquinas virtuales, manejo de dominios y servicios en la nube en Google Cloud Platform. También participé en la configuración de servicios de mensajería.",
-        "highlights": [
-          "Despliegue web y gestión de máquinas virtuales en Google Cloud Platform",
-          "Configuración de servidor de correos y servicios de mensajería",
-          "Configuración de página web con dominio propio utilizando Cloudflare",
-          "Creación de servidor de correos y utilización de servicios SMTP como Brevo",
-          "Desarrollo de un plugin de WordPress para obtener información del usuario sobre su DNI"
-        ]
-      }
-      
-    ],
-    "volunteer": [{
-      "organization": "Organization",
-      "position": "Volunteer",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…",
+    {
+      "name": "Buho S.A.C",
+      "position": "Practicante de Despliegue Web",
+      "url": "https://twitch.tv/midudev",
+      "startDate": "2024-02-01",
+      "endDate": "2024-03-01",
+      "summary": "Durante mi periodo de prácticas en Buho S.A.C, adquirí experiencia en despliegue web, gestión de máquinas virtuales, manejo de dominios y servicios en la nube en Google Cloud Platform. También participé en la configuración de servicios de mensajería.",
       "highlights": [
-        "Awarded 'Volunteer of the Month'"
+        "Despliegue web y gestión de máquinas virtuales en Google Cloud Platform",
+        "Configuración de servidor de correos y servicios de mensajería",
+        "Configuración de página web con dominio propio utilizando Cloudflare",
+        "Creación de servidor de correos y utilización de servicios SMTP como Brevo",
+        "Desarrollo de un plugin de WordPress para obtener información del usuario sobre su DNI"
       ]
-    }],
-    "education": [{
-      "institution": "SENATI, CFP Callao Ventanilla",
-      "url": "https://www.uoc.edu/portal/es/index.html",
-      "area": "Desarrollo de Software",
-      "studyType": "Educación Superior",
-      "startDate": "2022-02-01",
-      "endDate": null,
-      "score": "4.0",
-      "courses": [
-        "DB1101 - Basic SQL"
-      ]
-    }],
-    "awards": [{
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
-    }],
-    "certificates": [{
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
-    }],
-    "publications": [{
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
-    }],
-    "skills": [
-      {
-        "name": "HTML",
-        "level": "Master",
-        "keywords": [
-          "Desarrollo Web", "Frontend"
-        ]
-      },
-      {
-        "name": "CSS",
-        "level": "Master",
-        "keywords": [
-          "Desarrollo Web", "Frontend", "Diseño Responsive"
-        ]
-      },
-      {
-        "name": "JavaScript",
-        "level": "Master",
-        "keywords": [
-          "Desarrollo Web", "Frontend", "Backend", "Fullstack"
-        ]
-      },
-      {
-        "name": "TypeScript",
-        "level": "Avanzado",
-        "keywords": [
-          "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
-        ]
-      },
-      {
-        "name": "Tailwind",
-        "level": "Avanzado",
-        "keywords": [
-          "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
-        ]
-      },
-      {
-        "name": "Node",
-        "level": "Avanzado",
-        "keywords": [
-          "Desarrollo Web", "Backend", "JavaScript", "Servidor"
-        ]
-      },
-      {
-        "name": "React",
-        "level": "Avanzado",
-        "keywords": [
-          "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
-        ]
-      },
-      {
-        "name": "PHP",
-        "level": "Avanzado",
-        "keywords": [
-          "Desarrollo Web", "Backend", "PHP", "Servidor"
-        ]
-      },
-      {
-        "name": "MySQL",
-        "level": "Avanzado",
-        "keywords": [
-          "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
-        ]
-      },
-      {
-        "name": "Git",
-        "level": "Avanzado",
-        "keywords": [
-          "Control de Versiones", "Colaboración", "Código Fuente"
-        ]
-      },
-      {
-        "name": "GoogleCloud",
-        "level": "Avanzado",
-        "keywords": [
-          "Desarrollo Web", "Backend", "Servidor"
-        ]
-      }
-    ],
-    "languages": [
-      {
-        "language": "Spanish",
-        "fluency": "Native speaker"
-      },
-      {
-        "language": "English",
-        "fluency": "Advanced"
-      }
-    ],
-    "interests": [{
-      "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
-    }],
-    "references": [{
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }],
-    "projects": [
-      {
-        "name": "Sistema de Ventas y Dashboard de Administración",
-        "isActive": false,
-        "description": "Desarrollo de un sistema integral que incluye una tienda en línea con carrito de compras y un dashboard de administración.  Proyecto desarrollado en equipo de 6 personas.",
-        "highlights": [
-          "Sistema de ventas con carrito de compras y filtros por marca y categoría",
-          "Dashboard de registros de ventas",
-          "Implementado con C#, ASP.NET, jQuery y MySQL"
-        ],
-        "skills":[
-          "C#","MySQL","JS","ASP.NET"
-        ],
-        "url": "https://github.com/Dattaone/Carrito-de-Compras-.NET",
-        "image": "projects/Recibo.webp"
-      },
-      {
-        "name": "Generador de Recibos",
-        "isActive": false,
-        "description": "Implementé un generador de recibos para la escuela Nuestra Señora de Belén, mejorando la eficiencia en la creación, impresión y gestión de recibos.",
-        "highlights": [
-          "Generación automática de recibos",
-          "Integración con base de datos",
-          "Implementado con Java y MySQL"
-        ],
-        "skills":[
-          "Java","MySQL"
-        ],
-        "url": "https://github.com/Dattaone/Generador-de-Recibos",
-        "image": "projects/SpaceX.jpg"
-      },
-      {
-        "name": "Lanzamientos SpaceX",
-        "isActive": false,
-        "description": "Proyecto para probar las funcionalidades de Astro, mostrando todos los lanzamientos de SpaceX.",
-        "highlights": [
-          "Uso de la API de SpaceX",
-          "Estilización y paginación",
-          "Implementado con Astro y Tailwind"
-        ],
-        "skills":[
-          "JS","Astro","Tailwind"
-        ],
-        "url": "https://github.com/Dattaone/Space-x-documentation",
-        "image": "projects/SpaceX.jpg"
-      }
-      
+    }
+    
+  ],
+  "volunteer": [{
+    "organization": "Organization",
+    "position": "Volunteer",
+    "url": "https://organization.com/",
+    "startDate": "2012-01-01",
+    "endDate": "2013-01-01",
+    "summary": "Description…",
+    "highlights": [
+      "Awarded 'Volunteer of the Month'"
     ]
-  }
-  
+  }],
+  "education": [{
+    "institution": "SENATI, CFP Callao Ventanilla",
+    "url": "https://www.uoc.edu/portal/es/index.html",
+    "area": "Desarrollo de Software",
+    "studyType": "Educación Superior",
+    "startDate": "2022-02-01",
+    "endDate": null,
+    "score": "4.0",
+    "courses": [
+      "DB1101 - Basic SQL"
+    ]
+  }],
+  "awards": [{
+    "title": "Award",
+    "date": "2014-11-01",
+    "awarder": "Company",
+    "summary": "There is no spoon."
+  }],
+  "certificates": [{
+    "name": "Certificate",
+    "date": "2021-11-07",
+    "issuer": "Company",
+    "url": "https://certificate.com"
+  }],
+  "publications": [{
+    "name": "Publication",
+    "publisher": "Company",
+    "releaseDate": "2014-10-01",
+    "url": "https://publication.com",
+    "summary": "Description…"
+  }],
+  "skills": [
+    {
+      "name": "HTML",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web", "Frontend"
+      ]
+    },
+    {
+      "name": "CSS",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "JavaScript",
+      "level": "Master",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+      ]
+    },
+    {
+      "name": "TypeScript",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
+      ]
+    },
+    {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "Node",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
+      ]
+    },
+    {
+      "name": "PHP",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Backend", "PHP", "Servidor"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "Avanzado",
+      "keywords": [
+        "Control de Versiones", "Colaboración", "Código Fuente"
+      ]
+    },
+    {
+      "name": "GoogleCloud",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Backend", "Servidor"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Advanced"
+    }
+  ],
+  "interests": [{
+    "name": "Wildlife",
+    "keywords": [
+      "Ferrets",
+      "Unicorns"
+    ]
+  }],
+  "references": [{
+    "name": "Jane Doe",
+    "reference": "Reference…"
+  }],
+  "projects": [
+    {
+      "name": "Sistema de Ventas y Dashboard de Administración",
+      "isActive": false,
+      "description": "Desarrollo de un sistema integral que incluye una tienda en línea con carrito de compras y un dashboard de administración.  Proyecto desarrollado en equipo de 6 personas.",
+      "highlights": [
+        "Sistema de ventas con carrito de compras y filtros por marca y categoría",
+        "Dashboard de registros de ventas",
+        "Implementado con C#, ASP.NET, jQuery y MySQL"
+      ],
+      "skills":[
+        "C#","MySQL","JS","ASP.NET"
+      ],
+      "url": "https://github.com/Dattaone/Carrito-de-Compras-.NET",
+      "image": "projects/CarritoTienda.webp"
+    },
+    {
+      "name": "Generador de Recibos",
+      "isActive": false,
+      "description": "Implementé un generador de recibos para la escuela Nuestra Señora de Belén, mejorando la eficiencia en la creación, impresión y gestión de recibos.",
+      "highlights": [
+        "Generación automática de recibos",
+        "Integración con base de datos",
+        "Implementado con Java y MySQL"
+      ],
+      "skills":[
+        "Java","MySQL"
+      ],
+      "url": "https://github.com/Dattaone/Generador-de-Recibos",
+      "image": "projects/Recibo.webp"
+    },
+    {
+      "name": "Lanzamientos SpaceX",
+      "isActive": false,
+      "description": "Proyecto para probar las funcionalidades de Astro, mostrando todos los lanzamientos de SpaceX.",
+      "highlights": [
+        "Uso de la API de SpaceX",
+        "Estilización y paginación",
+        "Implementado con Astro y Tailwind"
+      ],
+      "skills":[
+        "JS","Astro","Tailwind"
+      ],
+      "url": "https://github.com/Dattaone/Space-x-documentation",
+      "image": "projects/SpaceX.webp"
+    }
+    
+  ]
+}
