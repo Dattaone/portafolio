@@ -2,11 +2,11 @@
 import Toast from "@/components/Toast.astro";
 ---
 
-<section id="contact" class="flex flex-col gap-10 items-center min-h-screen pt-20">
+<section id="contact" class="flex flex-col gap-10 items-center min-h-screen py-20 ">
   <h2 class="text-3xl font-bold text-gunmetal">Contacto</h2>
   <div
     id="contactFormContainer"
-    class="bg-gray-200 p-10 pb-0 rounded-3xl h-auto w-[40vw] flex flex-col items-center"
+    class="bg-gray-200 p-6 pb-0 sm:px-10 sm:pt-10 rounded-3xl h-auto sm:w-[75vw] md:w-[60vw] lg:w-[50vw] xl:w-[40vw] flex flex-col items-center"
   >
     <form
       id="contactForm"
@@ -16,7 +16,7 @@ import Toast from "@/components/Toast.astro";
       novalidate="novalidate"
       enctype="multipart/form-data"
     >
-      <div class="relative w-full mr-3 mb-6">
+      <div class="relative w-full mr-3 mb-3 sm:mb-6">
         <div
           class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none"
         >
@@ -46,7 +46,7 @@ import Toast from "@/components/Toast.astro";
         />
       </div>
       <textarea
-        class="rounded-xl min-h-56 border border-gray-300 p-2"
+        class="rounded-xl min-h-60 sm:min-h-72 border border-gray-300 p-2"
         id="message"
         name="message"
         placeholder="Tu mensaje..."

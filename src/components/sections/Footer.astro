@@ -7,19 +7,17 @@ import Toast from "../Toast.astro";
 ---
 
 <section id="footer">
-    <div>
-        <svg viewBox="0 0 1920 79" class="fill-gray-300/50"><path d="M0 59l64-11c64-11 192-34 320-43s256-5 384 4 256 23 384 34 256 21 384 14 256-30 320-41l64-11v94H0z" class="_footer-wave_vzxu7_233"></path></svg>
-    </div>
+    <svg viewBox="0 0 1920 79" class="fill-gray-300/50"><path d="M0 59l64-11c64-11 192-34 320-43s256-5 384 4 256 23 384 34 256 21 384 14 256-30 320-41l64-11v94H0z" class="_footer-wave_vzxu7_233"></path></svg>
     <footer
-        class="flex justify-beetween items-center w-full h-24 bg-gray-300/50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 px-10 text-sm"
+        class="flex justify-beetween items-center w-[100vw] h-24 bg-gray-300/50 text-gray-500 text-sm"
     >
-        <div class="flex-grow basis-0 flex gap-4 [&>ul>li>a]:flex [&>ul>li>a]:items-center [&>ul>li>a]:gap-2 ">
+        <div class="hidden pl-10 sm:flex flex-grow basis-0 gap-6 [&>ul>li>a]:flex [&>ul>li>a]:items-center [&>ul>li>a]:gap-2 ">
             <ul class="flex flex-col gap-3">
                 <li>
                     <a href="https://github.com/Dattaone" target="_blank"><GitHub class="size-4 fill-gray-500"/> Dattaone </a>
                 </li>
                 <li>
-                    <a href="www.linkedin.com/in/giuseppe-macchiavello-arredondo-a152a52a6" target="_blank"><LinkedIn class="size-4 fill-gray-500"/> Giuseppe Macchaivello </a>
+                    <a href="https://www.linkedin.com/in/giuseppe-macchiavello-arredondo-a152a52a6" target="_blank"><LinkedIn class="size-4 fill-gray-500"/> LinkedIn </a>
                 </li>
             </ul>
             <ul class="flex flex-col gap-3">
@@ -27,16 +25,16 @@ import Toast from "../Toast.astro";
                     <a href="mailto:chepogor@gmail.com" target="_blank"><Mail class="size-4 "/> chepogor@gmail.com</a>
                 </li>
                 <li>
-                    <a href="#footer" id="phone-number"><Phone class="size-4 fill-gray-500"/> +51 918 959 496</a>
+                    <span id="phone-number" class="flex items-center gap-2 cursor-pointer"><Phone class="size-4 fill-gray-500"/> +51 918 959 496</span>
                 </li>
             </ul>
         </div>
-        <div>
-            <p class="font-medium">
+        <div class="absolute w-full sm:hidden lg:flex justify-center">
+            <p class="font-medium text-center">
                 © 2024. Casi todos los derechos reservados.
             </p>
         </div>
-        <div class="flex-grow basis-0 flex justify-end">
+        <div class="hidden pr-10 sm:flex flex-grow basis-0 justify-end">
             <p>
                 <a href="https://github.com/Dattaone/portafolio" target="_blank" class="flex items-center gap-2"><GitHub class="size-4 fill-gray-500"/> Ver este proyecto en GitHub</a>
             </p>

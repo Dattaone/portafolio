@@ -2,7 +2,7 @@
 import { work } from "@cv";
 ---
 
-<section class="flex flex-col items-center min-h-auto w-full">
+<section class="landing-section flex flex-col items-center min-h-auto w-full" data-header-color="sky-500">
   <header class="flex justify-center items-center">
     <h2 class="text-3xl font-bold text-gunmetal">Experiencia</h2>
   </header>
@@ -37,7 +37,7 @@ import { work } from "@cv";
 
             return (
               <li >
-                <article class="flex flex-col gap-5 border border-gray-200 rounded-lg p-4 h-full">
+                <article class="flex flex-col gap-5 border border-gray-200 rounded-lg p-5 h-full ">
                   <header class="flex-1">
                     <h3 class="text-xl font-semibold mb-1 flex justify-between pb-5">
                       <a
@@ -48,7 +48,7 @@ import { work } from "@cv";
                       >
                         {name}
                       </a>
-                      <span class="flex justify-end gap-1 text-sm text-sky-500 [&>time]:animate-flicker">
+                      <span class="flex flex-col sm:flex-row sm:justify-end gap-1 text-sm text-sky-500 [&>time]:animate-flicker">
                         <time 
                             datetime={startDate} 
                             data-title={startDate}
@@ -63,13 +63,13 @@ import { work } from "@cv";
                         </time>
                       </span>
                     </h3>
-                    <p class="text-xs leading-tight mb-1">{summary}</p>
+                    <p class="text-pretty text-sm sm:text-base leading-tight mb-1">{summary}</p>
                   </header>
                   <footer class="flex-wrap ">
-                    <div class="flex flex-wrap gap-1 text-xs max-h-20 overflow-y-auto min-w-full scrollbar-thin text-pretty">
+                    <div class="flex flex-wrap gap-1 text-xs sm:text-sm max-h-20 sm:max-h-28 overflow-y-auto min-w-full scrollbar-thin text-pretty">
                         {highlights.map((highlight) => {
                             return (
-                            <span class="bg-gray-200 text-gray-700 rounded-full px-2 py-1 font-medium">
+                            <span class="bg-gray-200 text-gray-700 rounded-full sm:pl-2 sm:pr-2 pl-3 pr-1 py-1 font-medium">
                                 {highlight}
                             </span>
                             );
@@ -101,7 +101,7 @@ import { work } from "@cv";
   @keyframes show {
     from {
       opacity: 0;
-      scale: 25%;
+      scale: 75%;
     }
     to{
       opacity: 1;
@@ -115,7 +115,7 @@ import { work } from "@cv";
 
     animation-timeline: --image;
     animation-name: show;
-    animation-range: entry 25% cover 50%;
+    animation-range: entry 10% cover 30%;
     animation-fill-mode: both;
     animation-iteration-count: 1;
   }

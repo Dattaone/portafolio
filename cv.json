@@ -23,11 +23,6 @@
         "url": "www.linkedin.com/in/giuseppe-macchiavello-arredondo-a152a52a6"
       },
       {
-        "network": "X",
-        "username": "midudev",
-        "url": "https://x.com/midudev"
-      },
-      {
         "network": "GitHub",
         "username": "Dattaone",
         "url": "https://github.com/Dattaone"
@@ -65,17 +60,6 @@
     }
     
   ],
-  "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "url": "https://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description…",
-    "highlights": [
-      "Awarded 'Volunteer of the Month'"
-    ]
-  }],
   "education": [{
     "institution": "SENATI, CFP Callao Ventanilla",
     "url": "https://www.uoc.edu/portal/es/index.html",
@@ -123,6 +107,20 @@
       ]
     },
     {
+      "name": "Tailwind",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+      ]
+    },
+    {
+      "name": "Bootstrap",
+      "level": "Avanzado",
+      "keywords": [
+        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+      ]
+    },
+    {
       "name": "JavaScript",
       "level": "Master",
       "keywords": [
@@ -137,10 +135,10 @@
       ]
     },
     {
-      "name": "Tailwind",
+      "name": "React",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
       ]
     },
     {
@@ -151,17 +149,31 @@
       ]
     },
     {
-      "name": "React",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
-      ]
-    },
-    {
       "name": "PHP",
       "level": "Avanzado",
       "keywords": [
         "Desarrollo Web", "Backend", "PHP", "Servidor"
+      ]
+    },
+    {
+      "name": ".NET",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+      ]
+    },
+    {
+      "name": "Java",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+      ]
+    },
+    {
+      "name": "SQL",
+      "level": "Avanzado",
+      "keywords": [
+        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
       ]
     },
     {
@@ -241,14 +253,14 @@
     {
       "name": "Lanzamientos SpaceX",
       "isActive": false,
-      "description": "Proyecto para probar las funcionalidades de Astro, mostrando todos los lanzamientos de SpaceX.",
+      "description": "Proyecto para aprender las funcionalidades de Astro, inspirado en el curso de midudev, mostrando todos los lanzamientos de la API de SpaceX. En este proyecto se añadieron nuevos recursos, como traducción y paginación",
       "highlights": [
         "Uso de la API de SpaceX",
         "Estilización y paginación",
         "Implementado con Astro y Tailwind"
       ],
       "skills":[
-        "JS","Astro","Tailwind"
+        "TS","Astro","Tailwind"
       ],
       "url": "https://github.com/Dattaone/Space-x-documentation",
       "image": "projects/SpaceX.webp"

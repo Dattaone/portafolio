@@ -4,10 +4,14 @@ import CSS from "@/icons/skills/CSS.astro";
 import JS from "@/icons/skills/JS.astro";
 import TS from "@/icons/skills/TS.astro";
 import Tailwind from "@/icons/skills/Tailwind.astro";
+import Bootstrap from "@/icons/skills/Bootstrap.astro";
 import Node from "@/icons/skills/Node.astro";
 import React from "@/icons/skills/React.astro";
 import PHP from "@/icons/skills/PHP.astro";
+import NET from "@/icons/skills/NET.astro";
+import Java from "@/icons/skills/Java.astro";
 import MySQL from "@/icons/skills/MySQL.astro";
+import SQL from "@/icons/skills/SQL.astro";
 import Git from "@/icons/skills/Git.astro";
 import GoogleCloud from "@/icons/skills/GoogleCloud.astro";
 import Wave from "@/icons/Wave.astro";
@@ -19,79 +23,113 @@ const SKILLS_ICONS: Record<string, any> = {
     "JavaScript"    : JS,
     "TypeScript"    : TS,
     "Tailwind"      : Tailwind,
+    "Bootstrap"     : Bootstrap,
     "Node"          : Node,
     "React"         : React,
     "PHP"           : PHP,
+    ".NET"          : NET,
+    "Java"          : Java,
     "MySQL"         : MySQL,
+    "SQL"           : SQL,
     "Git"           : Git,
     "GoogleCloud"   : GoogleCloud
 };
+const quantity = skills.length;
 ---
 
-<section class="bg-sky-600" >
+<section id="technologies" class="landing-section" data-header-color="white">
     <header>
         <div class="bottom-0 left-0 w-full h-28 overflow-hidden bg-white">
             <Wave svgClass="w-full h-full" color="fill-sky-600" />
         </div>
         
     </header>
-    <main class="bg-sky-600 min-w-full mt-[-5px] pt-3 z-20">
+    <main class="bg-sky-600 flex flex-col gap-8 min-w-full mt-[-5px] py-10">
         <h2 class="text-3xl font-bold text-white text-center">Tecnologías</h2>
-        <div id="slider" class="w-[75vw] h-auto mx-auto overflow-hidden">
-            <div id="slider-track" class="flex gap-8 justify-start py-12 animate-scroll">
-                {skills.concat(skills).map(({ name }) => {
-                    const Icon = SKILLS_ICONS[name];
-                    return (
-                        <div class="flex flex-col items-center">
-                            <div  
-                                class:list={[
+        <div class="slider" style=`
+            --width:  125px;
+            --height: 125px;
+            --quantity: ${quantity} ;
+        `>
+            <div class="list">
+                {
+                    skills.map(({ name }, index) => {
+                        const Icon = SKILLS_ICONS[name];
+                        return (
+                            <div class="item" style=`--position: ${index + 1} ` >
+                                <div class:list={[
                                     "bg-white rounded-full size-20 flex justify-center items-center overflow-hidden",
-                                    {
-                                        "bg-[#007acc]"     : name === "TypeScript",
-                                        "bg-yellow-400" : name === "JavaScript"
-                                    }
-                                ]}
-                            >
-                                {Icon && <Icon class="size-16" />}
+                                        {
+                                            "bg-[#563D7D]"  : name === "Bootstrap",
+                                            "bg-[#007acd]"  : name === "TypeScript",
+                                            "bg-yellow-400" : name === "JavaScript"
+                                        }
+                                    ]}  
+                                >
+                                    {Icon && <Icon class="size-16" />}
+                                </div>
+                                <div class="bg-sky-900/20 border border-sky-700/5 backdrop-blur-lg rounded-full w-20 h-5 mt-2 flex justify-center items-center">
+                                    <p class="text-sm font-medium text-white text-center">{name}</p>
+                                </div>
                             </div>
-                            <div class="bg-sky-900/20 border border-sky-700/5 backdrop-blur-lg rounded-full w-20 h-5 mt-2 flex justify-center items-center">
-                                <p class="text-sm font-medium text-white text-center">{name}</p>
-                            </div>
-                        </div>
-                    );
-                })}
+                        );
+                    })
+                }
             </div>
+            
         </div>
+        
     </main>
-    <footer id="experience" class="bg-white">
+    <div id="experience" class="mt-56 h-52 absolute"></div>
+    <footer class="bg-white">
         <div class="h-auto w-full relative">
             <div class="bottom-0 left-0 w-full overflow-hidden">
                 <Wave class="w-full" color="fill-sky-600" isReversed={true} />
             </div>
         </div>
     </footer>
+    
 </section>
-
 <style>
-    @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
+    .slider{
+        width:100%;
+        height: var(--height);
+        overflow: hidden;
+        mask-image: linear-gradient(
+            to right,
+            transparent,
+            #000 10% 90%,
+            transparent
+        );
     }
+    .slider .list{
+        display: flex;
+        width: 100%;
+        min-width: calc(var(--width) * var(--quantity));
+        position: relative;
+    }
+    .slider .list .item{
+        width: var(--width);
+        height: var(--height);
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 100%;
+        animation: 10000ms linear 0s infinite normal none running autoRun; 
+        animation-delay: calc( (10s/var(--quantity)) * (var(--position) - 1) );
+    }
+    .slider .list .item img{
+        width: 100%;
+    }
+    @keyframes autoRun{
+        from{
+            left: 100%;
+        }to{
+            left: calc(var(--width) * -1);
+        }
 
-    .animate-scroll {
-        animation: scroll 20s linear infinite;
     }
 </style>
 
-<script type="module">
-    document.addEventListener("DOMContentLoaded", () => {
-        const slider = document.getElementById('slider-track');
-        const slideItems = slider.children;
-        const totalWidth = Array.from(slideItems).reduce((acc, slide) => acc + slide.offsetWidth + parseInt(getComputedStyle(slide).marginRight), 0);
-        slider.style.width = `${totalWidth}px`;
-    });
-</script>

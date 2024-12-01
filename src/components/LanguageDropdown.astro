@@ -1,0 +1,76 @@
+---
+import Spanish from "@/icons/Spanish.astro";
+import English from "@/icons/English.astro";
+import DropdownArrow from "@/icons/DropdownArrow.astro";
+import LanguageButton from "@/components/LanguageButton.astro";
+
+const {
+  primary = false,
+  secondary = false,
+  className = '',
+  dark = false,
+  currentLang = 'ES',
+} = Astro.props;
+
+
+
+/* bg-gunmetal/80 */
+const bgColor = dark ? "bg-gunmetal/80" : " ";
+
+const buttonClass = [
+  "toggle-element",
+  primary   && `flex items-center gap-1 px-2.5 py-4 ${bgColor}`,
+  secondary && `flex p-2 gap-2 w-20 rounded-lg outline outline-1 outline-gray-500 ${bgColor}`,
+  className,
+]
+  .filter(Boolean)
+  .join(" ");
+
+const dropdownClass = [
+  "dropdown-element hidden",
+  primary && `absolute bg-white shadow-lg mt-1 [&>li]:py-2 rounded-lg right-0`,
+  secondary && `[&>li]:p-2 w-20 rounded-lg bg-gray-800/90`,
+  bgColor,
+]
+  .filter(Boolean)
+  .join(" ");
+
+const languages = [
+  { code: 'ES', label: 'ES', Icon: Spanish },
+  { code: 'EN', label: 'EN', Icon: English },
+];
+---
+<div class="dropdown-container relative text-gray-600">
+  <LanguageButton 
+    lang={currentLang} 
+    Icon={currentLang === 'ES' ? <Spanish class="size-5 rounded-lg" /> : <English class="size-5 rounded-lg" />}
+    customClass={buttonClass} 
+    >
+    <DropdownArrow />
+  </LanguageButton>
+  <ul class={dropdownClass}>
+    {
+      languages.map(({code,label,Icon}) =>{
+        <li>
+          <LanguageButton lang={label} Icon={Icon} />
+        </li>
+      })
+    }
+  </ul>
+ 
+</div>
+<!-- {primary ? (
+  <>
+    <span class="relative"><Spanish class="size-5" /></span>
+    <span>ES</span>
+  </>
+) : (
+  <>
+    <span class="relative flex">
+      <Spanish class="size-5 rounded-lg" />
+      <span class="text-gray-400">ES</span>
+    </span>
+    <span class="text-gray-400"><DropdownArrow /></span>
+  </>
+)
+} -->
