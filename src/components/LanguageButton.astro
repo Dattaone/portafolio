@@ -3,7 +3,6 @@ const { lang, Icon, customClass } = Astro.props;
 
 ---
 <button class={customClass? customClass:"flex items-center gap-1 px-2"} >
-  <span class="relative"><Icon class="size-5" /></span>
+  <span class="relative"><slot /></span>
   <span>{lang}</span>
-  <slot />
 </button>

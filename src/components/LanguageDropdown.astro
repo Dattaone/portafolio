@@ -8,19 +8,14 @@ const {
   primary = false,
   secondary = false,
   className = '',
-  dark = false,
   currentLang = 'ES',
 } = Astro.props;
 
 
-
-/* bg-gunmetal/80 */
-const bgColor = dark ? "bg-gunmetal/80" : " ";
-
 const buttonClass = [
   "toggle-element",
-  primary   && `flex items-center gap-1 px-2.5 py-4 ${bgColor}`,
-  secondary && `flex p-2 gap-2 w-20 rounded-lg outline outline-1 outline-gray-500 ${bgColor}`,
+  primary   && `flex items-center gap-1 px-2.5 py-4`,
+  secondary && `flex p-2 gap-2 w-20 rounded-lg outline outline-1 outline-gray-500 bg-gray-800/90 text-gray-400 `,
   className,
 ]
   .filter(Boolean)
@@ -28,9 +23,8 @@ const buttonClass = [
 
 const dropdownClass = [
   "dropdown-element hidden",
-  primary && `absolute bg-white shadow-lg mt-1 [&>li]:py-2 rounded-lg right-0`,
-  secondary && `[&>li]:p-2 w-20 rounded-lg bg-gray-800/90`,
-  bgColor,
+  primary && `absolute bg-white shadow-lg mt-1 [&>li]:p-2.5 rounded-lg right-0 [&>li:hover]:bg-gray-100 [&>li:hover]:transition-all `,
+  secondary && `[&>li]:p-2 [&>li]:pl-0.5 w-20 rounded-lg bg-gray-800/90 text-gray-400 [&>li:hover]:bg-gray-900/30 `,
 ]
   .filter(Boolean)
   .join(" ");
@@ -41,20 +35,21 @@ const languages = [
 ];
 ---
 <div class="dropdown-container relative text-gray-600">
-  <LanguageButton 
-    lang={currentLang} 
-    Icon={currentLang === 'ES' ? <Spanish class="size-5 rounded-lg" /> : <English class="size-5 rounded-lg" />}
-    customClass={buttonClass} 
-    >
-    <DropdownArrow />
-  </LanguageButton>
+  <button
+    class={buttonClass}
+  >
+    <span class="relative">{currentLang == 'ES' ? <Spanish class="size-5 rounded-xl" /> : <English class="size-5 rounded-xl" />}</span>
+    <span>{currentLang}</span>
+    <span class="text-gray-400"><DropdownArrow /></span>
+  </button>
   <ul class={dropdownClass}>
     {
-      languages.map(({code,label,Icon}) =>{
+      
+      languages.map(({code,label,Icon}) =>(
         <li>
-          <LanguageButton lang={label} Icon={Icon} />
+          <LanguageButton lang={label}><Icon class="size-5 rounded-xl" /></LanguageButton>
         </li>
-      })
+      ))
     }
   </ul>
  
